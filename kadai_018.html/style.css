@@ -1,0 +1,78 @@
+/* div要素「top」に対する装飾 */
+#top {
+  width: 800px; /* 横幅 */
+  background-color: #dcc9f4; /* 背景色 */
+  margin: 20px auto; /* 上下余白＆中央配置 */
+  text-align: center; /* 中の要素を中央揃え */
+}
+
+/* p要素「top-child」に対する装飾 */
+.top-child {
+  width: 20%; /* 親要素の20%の横幅 */
+  background-color: #ffd9df; /* 背景色 */
+  display: inline-block; /* 横並びに配置 */
+}
+/* div要素「middle」に対する装飾 */
+#middle {
+  width: 800px; /* 横幅 */
+  height: 800px; /* 高さ */
+  margin: 20px auto; /* 上下の余白と中央配置 */
+  background-color: #ffd9df; /* 背景色 */
+  position: relative; /* 子要素の位置指定のためにrelativeを設定 */
+}
+
+/* div要素「middle-child01」「middle-child02」「middle-child03」に対する共通の装飾 */
+#middle-child01, #middle-child02, #middle-child03 {
+  width: 200px; /* 横幅 */
+  height: 200px; /* 高さ */
+  background-color: #87ceeb; /* 背景色 */
+  position: absolute; /* 親要素を基準に位置指定 */
+}
+
+/* 各子要素の位置指定 */
+#middle-child01 {
+  top: 100px;
+  left: 100px;
+}
+
+#middle-child02 {
+  top: 300px;
+  left: 300px;
+}
+
+#middle-child03 {
+  top: 500px;
+  left: 500px;
+}
+/* div要素「bottom」に対する装飾 */
+#bottom {
+  width: 800px; /* 横幅 */
+  height: 300px; /* 高さ */
+  margin: 0 auto; /* 画面の中央に配置 */
+  background-color: #87ceeb; /* 背景色 */
+  position: relative; /* 子要素の位置基準を設定 */
+}
+
+/* div要素「bottom-child01」「bottom-child02」「bottom-child03」に対する共通装飾 */
+#bottom-child01, #bottom-child02, #bottom-child03 {
+  width: 400px; /* 横幅 */
+  height: 100px; /* 高さ */
+  background-color: #e5dcf0; /* 背景色 */
+  position: absolute; /* 親要素を基準に位置指定 */
+}
+
+/* 各子要素の位置指定 */
+#bottom-child01 {
+  top: 100px;
+  left: 0; /* 本来の表示場所 */
+}
+
+#bottom-child02 {
+  top: 100px;
+  left: 200px; /* 左から200pxずらして配置 */
+}
+
+#bottom-child03 {
+  top: 100px;
+  left: 400px; /* 左から400pxずらして配置 */
+}
