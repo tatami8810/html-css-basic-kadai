@@ -50,7 +50,7 @@
   height: 300px; /* 高さ */
   margin: 0 auto; /* 画面の中央に配置 */
   background-color: #87ceeb; /* 背景色 */
-  position: relative; /* 子要素の位置基準を設定 */
+  position: relative; /* 子要素の基準位置 */
 }
 
 /* div要素「bottom-child01」「bottom-child02」「bottom-child03」に対する共通装飾 */
@@ -64,7 +64,7 @@
 /* 各子要素の位置指定 */
 #bottom-child01 {
   top: 100px;
-  left: 0; /* 本来の表示場所 */
+  left: 0; /* 左端を基準とした明示的な位置指定 */
 }
 
 #bottom-child02 {
