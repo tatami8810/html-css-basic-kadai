@@ -1,0 +1,98 @@
+/* 余白をリセット */
+body, h1, p {
+  margin: 0; /* 上下左右余白を0に */
+}
+
+/* p要素とa要素のフォントサイズを20pxに設定 */
+p, a {
+  font-size: 20px; /* フォントサイズを20pxに */
+}
+/* header要素内のスタイル */
+header {
+  margin-bottom: 20px; /* 下の余白を20pxに */
+  background-color: rgb(244, 79, 79); /* 背景色 */
+  text-align: center; /* 中の要素を中央揃え */
+}
+
+/* h1要素内のスタイル */
+header h1 {
+  color: rgb(255, 255, 255); /* 文字色を白に */
+}
+/* main要素全体の余白設定 */
+main {
+  padding: 10px; /* 上下左右余白 */
+}
+
+/* parent要素のFlexbox設定 */
+#parent {
+  display: flex; /* Flexコンテナに設定 */
+  justify-content: space-between; /* 均等な間隔で配置 */
+}
+
+/* contents要素のスタイル */
+.contents {
+  border: 3px solid rgb(238, 204, 204); /* 線の太さ・色 */
+  flex-basis: 25%; /* 幅を親要素の25% */
+  padding: 10px 15px; /* 内側の余白: 上下10px, 左右15px */
+  margin: 20px 0; /* 外側の余白: 上下20px, 左右0 */
+  text-align: center; /* 中の要素を中央揃え */
+}
+
+/* h2要素のスタイル */
+.contents h2 {
+  font-size: 25px; /* フォントサイズ */
+  border-bottom: 3px dotted rgb(236, 122, 122); /* 点線の下線 */
+  color: rgb(239, 111, 139); /* 「●」記号の色 */
+}
+
+/* h2要素の前に「●」を追加 */
+.contents h2::before {
+  content: "●"; /* 記号を表示 */
+  margin-right: 10px; /* 記号とテキストの間隔 */
+  color: rgb(239, 111, 139); /* 色設定 */
+}
+
+/* 二番目のp要素内の一番目の文字にスタイル */
+.contents p:nth-of-type(2)::first-letter {
+  font-weight: bold; /* 太字 */
+  color: rgb(97, 206, 249); /* 文字色 */
+}
+/* footer要素内のスタイル */
+footer {
+  background-color: rgb(244, 79, 79); /* 背景色 */
+  text-align: center; /* 中身を中央揃え */
+  padding: 10px; /* 余白を追加してスペースを確保 */
+}
+
+/* footer内のa要素のスタイル */
+footer a {
+  color: rgb(255, 255, 255); /* 通常の文字色 */
+  text-decoration: none; /* 下線を削除 */
+}
+
+footer a:visited {
+  color: rgb(193, 234, 251); /* 訪問済みリンクの文字色 */
+}
+
+footer a:hover {
+  color: rgb(245, 178, 168); /* マウスホバー時の文字色 */
+}
+/* 画面幅768px以下のスタイル設定 */
+@media screen and (max-width: 768px) {
+  /* h2のスタイル設定 */
+  .contents h2 {
+      font-size: 30px; /* フォントサイズ */
+  }
+
+  /* pのスタイル設定 */
+  .contents p {
+      font-size: 25px; /* フォントサイズ */
+  }
+
+  /* Flexコンテナの子要素を縦に並べる */
+  #parent {
+      flex-direction: column; /* 要素を縦並びに */
+      align-items: center; /* 子要素を中央揃えに */
+  }
+}
+
